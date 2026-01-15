@@ -117,15 +117,6 @@ El formulario incluye las siguientes configuraciones:
 
 Para más opciones, visita: https://formsubmit.co/
 
-## Estructura del Proyecto
-```
-proyecto-formulario/
-│
-├── index.html          # Formulario principal
-├── gracias.html        # Página de agradecimiento (opcional)
-├── styles.css          # Estilos (si están separados)
-└── README.md           # Este archivo
-```
 ## Solución de Problemas
 
 **El formulario no envía:**
@@ -144,8 +135,11 @@ proyecto-formulario/
 - CSS3
 - FormSubmit.co (servicio de envío de formularios)
 
-## Autor
+## 👤 Autor
 
-[Alexandra Santa Muñoz]
+Creado por **[Alexandra Santa Muñoz]([https://github.com/tu-usuario](https://github.com/alexa272/ProyectoFinal_Tecnologia_En_Produccion_de_Multimedia))**
+
+- GitHub: [@alexa272](https://github.com/alexa272)
+- Email: alexandrasantamunoz@gmail.com
 
 Espero que este proyecto sea una muestra de mis habilidades y conocimientos adquiridos en el SENA. ¡Gracias por visitar!
