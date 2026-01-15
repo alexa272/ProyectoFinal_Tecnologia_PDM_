@@ -1,5 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<!--
+  Archivo: contacto.html
+  Propósito: Página de contacto, para solicitud de servicios
+  Autor: Alexandra Santa Muñoz
+  Fecha: 14/01/2026
+  Descripción: Contiene la estructura principal con header, navegación y secciones
+-->
+
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,103 +16,91 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="preload" href="css/styles.css" as="style">
-    <link rel="stylesheet" href="css/estilos.css">    
+    <link rel="preload" href="css/main.css" as="style">
+    <link rel="stylesheet" href="css/main.css">    
     <link rel="icon" type="image/x-icon" href="img/logo.png">
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script src="/js/script.js"></script>
   
-    <title>M&SS</title>
+    <title>Contacto</title>
 
 </head>
 <body>
-    <header>
-        <h1 class="logo">
-          <img src="img/logo.png" alt="">
-        </h1>
-    </header>
 
-    <div class="nav-bg">
-        <nav class="navegacion-principal contenedor">
-            <a href="index.html">Inicio</a>
-            <a href="web.html">Diseño web</a>
-            <a href="animacion.html">Animaciones en 3D</a>
-            <a href="video.html">Videos</a></li>
-            <a href="marketing.html">Marketing Digital</a>
-            <a href="acercade.html">Acerca De</a>
-            <a href="contacto.html">Contacto</a>
-        </nav>
-    </div>
-
-    <section class="contenedor-formulario">
-      <h2>Solicita Nuestros Servicios</h2>
-      <p class="subtitulo">Completa el formulario y nos pondremos en contacto contigo</p>
+  <!-- Encabezado principal del sitio -->
+  <header class="site-header">
+    
+    <!-- Logo del sitio -->
+    <figure class="logo">
+      <img src="img/logo.png" alt="Logo de la empresa - Diseño web y marketing digital">
+    </figure>
+    
+    <!-- Navegación principal del sitio -->
+    <nav class="nav-bg" aria-label="Navegación principal">
+      <ul class="navegacion-principal contenedor">
+        <li><a href="index.html" aria-current="page">Inicio</a></li>
+        <li><a href="web.html">Diseño web</a></li>
+        <li><a href="animacion.html">Animaciones en 3D</a></li>
+        <li><a href="video.html">Videos</a></li>
+        <li><a href="marketing.html">Marketing Digital</a></li>
+        <li><a href="acercade.html">Acerca De</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>  
+  </header>
+  
+  <section class="contenedor-formulario">
+    <h2>Solicita Nuestros Servicios</h2>
+    <p class="subtitulo">Completa el formulario y nos pondremos en contacto contigo</p>
       
-      <form id="contactForm" class="formulario">
-        <div class="form-group">
-          <label for="nombre">Nombre Completo *</label>
-          <input 
-            type="text" 
-            id="nombre" 
-            name="nombre" 
-            required 
-            placeholder="Ingresa tu nombre completo"
-          >
-        </div>
+    <form id="contactForm" class="formulario" action="https://formsubmit.co/341b85edf61e0c3c13cb82a1ad5a904d" method="POST"/>
+      <div class="form-group">
+        <label for="nombre">Nombre Completo *</label>
+        <input type="text" id="nombre" name="nombre" required placeholder="Ingresa tu nombre completo">
+      </div>
 
-        <div class="form-group">
-          <label for="email">Correo Electrónico *</label>
-          <input 
-            type="email" 
-            id="email" 
-            name="email" 
-            required 
-            placeholder="tucorreo@ejemplo.com"
-          >
-        </div>
+      <div class="form-group">
+        <label for="email">Correo Electrónico *</label>
+        <input type="email" id="email" name="email" required placeholder="tucorreo@ejemplo.com">
+      </div>
 
-        <div class="form-group">
-          <label for="telefono">Teléfono *</label>
-          <input 
-            type="tel" 
-            id="telefono" 
-            name="telefono" 
-            required 
-            placeholder="+57 300 123 4567"
-          >
-        </div>
+      <div class="form-group">
+        <label for="telefono">Teléfono *</label>
+        <input type="tel" id="telefono" name="telefono" required placeholder="+57 300 123 4567">
+      </div>
 
-        <div class="form-group">
-          <label for="servicio">Servicio Solicitado *</label>
-          <select id="servicio" name="servicio" required>
-            <option value="">-- Selecciona un servicio --</option>
-            <option value="Diseño Web">Diseño Web</option>
-            <option value="Animaciones 3D">Animaciones 3D</option>
-            <option value="Marketing Digital">Marketing Digital</option>
-            <option value="Videos">Videos</option>
-          </select>
-        </div>
+      <div class="form-group">
+        <label for="servicio">Servicio Solicitado *</label>
+        <select id="servicio" name="servicio" required>
+          <option value="">-- Selecciona un servicio --</option>
+          <option value="Diseño Web">Diseño Web</option>
+          <option value="Animaciones 3D">Animaciones 3D</option>
+          <option value="Marketing Digital">Marketing Digital</option>
+          <option value="Videos">Videos</option>
+        </select>
+      </div>
 
-        <div class="form-group">
-          <label for="mensaje">Mensaje</label>
-          <textarea 
-            id="mensaje" 
-            name="mensaje" 
-            rows="5" 
-            placeholder="Cuéntanos más sobre tu proyecto..."
-          ></textarea>
-        </div>
+      <div class="form-group">
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" name="mensaje" rows="5" placeholder="Cuéntanos más sobre tu proyecto..."></textarea>
+      </div>
 
-        <button type="submit" class="btn-enviar">
-          <span class="btn-text">Enviar Solicitud</span>
-          <span class="btn-loading" style="display: none;">Enviando...</span>
-        </button>
+      <button type="submit" class="btn-enviar">
+        <span class="btn-text">Enviar Solicitud</span>
+        <span class="btn-loading" style="display: none;">Enviando...</span>
+      </button>
 
-        <div id="mensajeRespuesta" class="mensaje-respuesta"></div>
-      </form>
-    </section>
-    <footer>
-        <div class="social-media">
+      <div id="mensajeRespuesta" class="mensaje-respuesta"></div>
+
+      <input type="hidden" name="_next" value="http://127.0.0.1:5500/contacto.html">
+      <input type="hidden" name="_captcha" value="false">
+
+    </form>
+  </section>
+
+  <!-- Pie de página del sitio -->
+  <footer>
+    <div class="social-media">
     <!-- Instagram -->
     <a href="https://instagram.com/tu_usuario" target="_blank" aria-label="Instagram">
       <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
@@ -126,14 +122,14 @@
       </svg>
     </a>
 
-  </div>
+    </div>
 
-        <p class="footerCopy">
-            <span class="copyright">&copy; 2025 Todos los Derechos Reservados</span>
-            <span class="separador"> | </span>
-            <span class="desarrollador">Desarrollado por Alexandra Santa Muñoz</span>
-        </p>
+    <p class="footerCopy">
+      <span class="copyright">&copy; 2025 Todos los Derechos Reservados</span>
+      <span class="separador"> | </span>
+      <span class="desarrollador">Desarrollado por Alexandra Santa Muñoz</span>
+    </p>
      
-    </footer>
+  </footer>
 </body>
 </html>

@@ -1,4 +1,12 @@
 <!DOCTYPE html>
+<!--
+  Archivo: acercade.html
+  Propósito: Página principal descripción de la empresa
+  Autor: Alexandra Santa Muñoz
+  Fecha: 14/01/2026
+  Descripción: Contiene la estructura principal con header, navegación y secciones
+-->
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,42 +16,222 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="preload" href="css/styles.css" as="style">
-    <link rel="stylesheet" href="css/estilos.css">    
+    <link rel="preload" href="css/main.css" as="style">
+    <link rel="stylesheet" href="css/main.css">    
     <link rel="icon" type="image/x-icon" href="img/logo.png">
     <title>M&SS</title>
 
 </head>
 <body>
-    <header>
-        <h1 class="logo">
-          <img src="img/logo.png" alt="">
-        </h1>
-    </header>
+  <!-- Encabezado principal del sitio -->
+  <header>
+  
+    <!-- Logo del sitio -->
+    <figure class="logo">
+      <img src="img/logo.png" alt="Logo de la empresa - Diseño web y marketing digital">
+    </figure>
+    
+    <!-- Navegación principal del sitio -->
+    <nav class="nav-bg" aria-label="Navegación principal">
+      <ul class="navegacion-principal contenedor">
+        <li><a href="index.html" aria-current="page">Inicio</a></li>
+        <li><a href="web.html">Diseño web</a></li>
+        <li><a href="animacion.html">Animaciones en 3D</a></li>
+        <li><a href="video.html">Videos</a></li>
+        <li><a href="marketing.html">Marketing Digital</a></li>
+        <li><a href="acercade.html">Acerca De</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  
+  </header>    
+  
 
-    <div class="nav-bg">
-        <nav class="navegacion-principal contenedor">
-            <a href="index.html">Inicio</a>
-            <a href="web.html">Diseño web</a>
-            <a href="animacion.html">Animaciones en 3D</a>
-            <a href="video.html">Videos</a></li>
-            <a href="marketing.html">Marketing Digital</a>
-            <a href="acercade.html">Acerca De</a>
-            <a href="contacto.html">Contacto</a>
-        </nav>
-    </div>
-
-    <section>
-
-      <h1></h1>
-        <p>
-            diseñamos una pagina web de acuerdo a tus necesidades || ACER UN CARRUSEL CON LOS LETREROS DE CADA UNA DE LAS COSAS,
-            DISEÑO WEB ANIMACIONES, VIDEOS, MARKETING
+    <!-- Acerca De Section -->
+  <section id="acerca" class="acerca-de">
+    <div class="container">
+      <!-- Encabezado -->
+      <div class="acerca-header">
+        <h2 class="section-title">Acerca De Nosotros</h2>
+        <p class="section-subtitle">
+          Somos un equipo apasionado por transformar ideas en experiencias digitales extraordinarias
         </p>
-    </section>
+      </div>
 
+      <!-- Historia y Misión -->
+      <div class="acerca-content">
+        <div class="acerca-text">
+          <h3>Nuestra Historia</h3>
+          <p>
+            Comenzamos como un pequeño estudio creativo con una gran visión: democratizar el acceso 
+            a servicios digitales de alta calidad. Hoy, somos un equipo multidisciplinario que combina 
+            creatividad, tecnología y estrategia para llevar marcas al siguiente nivel.
+          </p>
+          <p>
+            Con años de experiencia en el mercado digital, hemos ayudado a decenas de empresas a 
+            establecer su presencia online, aumentar sus ventas y conectar auténticamente con su audiencia.
+          </p>
+        </div>
 
-    <footer>
+        <div class="acerca-image">
+          <div class="image-placeholder">
+            <span>🚀</span>
+            <p>Tu visión, nuestra misión</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Misión, Visión, Valores -->
+      <div class="mvv-grid">
+        <div class="mvv-card">
+          <div class="mvv-icon">🎯</div>
+          <h3>Misión</h3>
+          <p>
+            Empoderar a empresas y emprendedores con soluciones digitales innovadoras que impulsen 
+            su crecimiento y les permitan destacar en un mercado cada vez más competitivo.
+          </p>
+        </div>
+
+        <div class="mvv-card">
+          <div class="mvv-icon">🔭</div>
+          <h3>Visión</h3>
+          <p>
+            Ser la agencia digital de referencia en Latinoamérica, reconocida por nuestra excelencia 
+            creativa, compromiso con resultados y capacidad de transformar ideas en realidades digitales.
+          </p>
+        </div>
+
+        <div class="mvv-card">
+          <div class="mvv-icon">💎</div>
+          <h3>Valores</h3>
+          <ul class="valores-lista">
+            <li>Innovación constante</li>
+            <li>Excelencia en cada proyecto</li>
+            <li>Transparencia y honestidad</li>
+            <li>Compromiso con resultados</li>
+            <li>Trabajo en equipo</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Estadísticas -->
+      <div class="estadisticas">
+        <div class="stat-card">
+          <div class="stat-numero">150+</div>
+          <p class="stat-texto">Proyectos Completados</p>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-numero">100+</div>
+          <p class="stat-texto">Clientes Satisfechos</p>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-numero">5+</div>
+          <p class="stat-texto">Años de Experiencia</p>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-numero">98%</div>
+          <p class="stat-texto">Tasa de Satisfacción</p>
+        </div>
+      </div>
+
+      <!-- Nuestro Equipo -->
+      <div class="equipo-section">
+        <h3 class="equipo-title">Nuestro Equipo</h3>
+        <p class="equipo-subtitle">
+          Un grupo de profesionales talentosos dedicados a hacer realidad tus proyectos
+        </p>
+
+        <div class="equipo-grid">
+          <div class="miembro-card">
+            <div class="miembro-avatar">
+              <span>👨‍💻</span>
+            </div>
+            <h4>Desarrolladores Web</h4>
+            <p>Expertos en las últimas tecnologías y frameworks para crear sitios web robustos y escalables.</p>
+          </div>
+
+          <div class="miembro-card">
+            <div class="miembro-avatar">
+              <span>🎨</span>
+            </div>
+            <h4>Diseñadores Creativos</h4>
+            <p>Profesionales del diseño UI/UX que crean experiencias visuales memorables y funcionales.</p>
+          </div>
+
+          <div class="miembro-card">
+            <div class="miembro-avatar">
+              <span>🎬</span>
+            </div>
+            <h4>Productores Audiovisuales</h4>
+            <p>Especialistas en producción de video y animación 3D que dan vida a tus ideas.</p>
+          </div>
+
+          <div class="miembro-card">
+            <div class="miembro-avatar">
+              <span>📊</span>
+            </div>
+            <h4>Estrategas Digitales</h4>
+            <p>Expertos en marketing digital que diseñan campañas efectivas basadas en datos.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Proceso de Trabajo -->
+      <div class="proceso-section">
+        <h3 class="proceso-title">Nuestro Proceso de Trabajo</h3>
+        <p class="proceso-subtitle">
+          Un método probado que garantiza resultados excepcionales
+        </p>
+
+        <div class="proceso-timeline">
+          <div class="proceso-step">
+            <div class="step-numero">1</div>
+            <div class="step-content">
+              <h4>Descubrimiento</h4>
+              <p>Conocemos tu negocio, objetivos y audiencia para crear una estrategia personalizada.</p>
+            </div>
+          </div>
+
+          <div class="proceso-step">
+            <div class="step-numero">2</div>
+            <div class="step-content">
+              <h4>Planificación</h4>
+              <p>Desarrollamos un plan detallado con tiempos, recursos y entregables claros.</p>
+            </div>
+          </div>
+
+          <div class="proceso-step">
+            <div class="step-numero">3</div>
+            <div class="step-content">
+              <h4>Diseño y Desarrollo</h4>
+              <p>Nuestro equipo trabaja en la creación de tu proyecto con revisiones constantes.</p>
+            </div>
+          </div>
+
+          <div class="proceso-step">
+            <div class="step-numero">4</div>
+            <div class="step-content">
+              <h4>Lanzamiento</h4>
+              <p>Implementamos tu proyecto y monitoreamos su desempeño para optimizar resultados.</p>
+            </div>
+          </div>
+
+          <div class="proceso-step">
+            <div class="step-numero">5</div>
+            <div class="step-content">
+              <h4>Soporte Continuo</h4>
+              <p>Brindamos mantenimiento y actualizaciones para asegurar el éxito a largo plazo.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <footer>
         <div class="social-media">
     <!-- Instagram -->
     <a href="https://instagram.com/tu_usuario" target="_blank" aria-label="Instagram">
@@ -66,7 +254,7 @@
       </svg>
     </a>
 
-  </div>
+    </div>
 
         <p class="footerCopy">
             <span class="copyright">&copy; 2025 Todos los Derechos Reservados</span>
@@ -74,6 +262,6 @@
             <span class="desarrollador">Desarrollado por Alexandra Santa Muñoz</span>
         </p>
      
-    </footer>
+  </footer>
 </body>
 </html>

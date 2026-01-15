@@ -1,50 +1,212 @@
 <!DOCTYPE html>
-<html lang="en">
+<!--
+  Archivo: index.html
+  Propósito: Página principal del sitio web corporativo
+  Autor: Alexandra Santa Muñoz
+  Fecha: 14/01/2026
+  Descripción: Contiene la estructura principal con header, navegación y secciones
+-->
+
+<html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preload" href="css/normalize.css" as="style">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="preload" href="css/styles.css" as="style">
-    <link rel="stylesheet" href="css/estilos.css">    
-    <link rel="icon" type="image/x-icon" href="img/logo.png">
-    <title>M&SS</title>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preload" href="css/normalize.css" as="style">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="preload" href="css/main.css" as="style">
+  <link rel="stylesheet" href="css/main.css">    
+  <link rel="icon" type="image/x-icon" href="img/logo.png">
+  <title>Inicio</title>
 </head>
+
 <body>
-    <header>
-        <h1 class="logo">
-          <img src="img/logo.png" alt="">
-        </h1>
-    </header>
 
-    <div class="nav-bg">
-        <nav class="navegacion-principal contenedor">
-            <a href="index.html">Inicio</a>
-            <a href="web.html">Diseño web</a>
-            <a href="animacion.html">Animaciones en 3D</a>
-            <a href="video.html">Videos</a></li>
-            <a href="marketing.html">Marketing Digital</a>
-            <a href="acercade.html">Acerca De</a>
-            <a href="contacto.html">Contacto</a>
-        </nav>
+  <!-- Encabezado principal del sitio -->
+  <header>
+  
+    <!-- Logo del sitio -->
+    <figure class="logo">
+      <img src="img/logo.png" alt="Logo de la empresa - Diseño web y marketing digital">
+    </figure>
+    
+    <!-- Navegación principal del sitio -->
+    <nav class="nav-bg" aria-label="Navegación principal">
+      <ul class="navegacion-principal contenedor">
+        <li><a href="index.html" aria-current="page">Inicio</a></li>
+        <li><a href="web.html">Diseño web</a></li>
+        <li><a href="animacion.html">Animaciones en 3D</a></li>
+        <li><a href="video.html">Videos</a></li>
+        <li><a href="marketing.html">Marketing Digital</a></li>
+        <li><a href="acercade.html">Acerca De</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1 class="hero-title">Transformamos Ideas en Experiencias Digitales</h1>
+      <p class="hero-subtitle">
+        Creamos soluciones innovadoras en diseño web, animaciones 3D, videos y marketing digital 
+        para impulsar tu marca al siguiente nivel
+      </p>
+      <div class="hero-buttons">
+        <a href="#servicios" class="btn-primary">Ver Servicios</a>
+        <a href="#contacto" class="btn-secondary">Contáctanos</a>
+      </div>
     </div>
+    <div class="hero-image">
+      <div class="floating-card card-1">
+        <span>🎨</span>
+        <p>Diseño Web</p>
+      </div>
+      <div class="floating-card card-2">
+        <span>🎬</span>
+        <p>Videos</p>
+      </div>
+      <div class="floating-card card-3">
+        <span>📊</span>
+        <p>Marketing</p>
+      </div>
+      <div class="floating-card card-4">
+        <span>🎮</span>
+        <p>3D</p>
+      </div>
+    </div>
+  </section>
 
-    <section>
+  <!-- Servicios Section -->
+  <section id="servicios" class="servicios">
+    <div class="container">
+      <h2 class="section-title">Nuestros Servicios</h2>
+      <p class="section-subtitle">
+        Soluciones completas para llevar tu presencia digital al máximo nivel
+      </p>
+      
+      <div class="servicios-grid">
+        <!-- Diseño Web -->
+        <div class="servicio-card">
+          <div class="servicio-icon">💻</div>
+          <h3>Diseño Web</h3>
+          <p>
+            Creamos sitios web modernos, responsivos y optimizados que convierten visitantes 
+            en clientes. Cada diseño es único y adaptado a tu marca.
+          </p>
+          <ul class="servicio-features">
+            <li>Diseño responsivo</li>
+            <li>Optimización SEO</li>
+            <li>Carga ultrarrápida</li>
+            <li>Experiencia de usuario</li>
+          </ul>
+      </div>
 
-      <h1></h1>
+        <!-- Animaciones 3D -->
+      <div class="servicio-card">
+        <div class="servicio-icon">🎮</div>
+        <h3>Animaciones 3D</h3>
         <p>
-            diseñamos una pagina web de acuerdo a tus necesidades || ACER UN CARRUSEL CON LOS LETREROS DE CADA UNA DE LAS COSAS,
-            DISEÑO WEB ANIMACIONES, VIDEOS, MARKETING
+          Damos vida a tus ideas con animaciones 3D impactantes. Desde modelado de productos 
+          hasta experiencias inmersivas que cautivan a tu audiencia.
         </p>
-    </section>
 
+        <ul class="servicio-features">
+          <li>Modelado 3D</li>
+          <li>Renderizado fotorrealista</li>
+          <li>Animaciones interactivas</li>
+          <li>Realidad virtual</li>
+        </ul>  
+      </div>
 
-    <footer>
-        <div class="social-media">
+        <!-- Videos -->
+      <div class="servicio-card">
+        <div class="servicio-icon">🎬</div>
+        <h3>Producción de Videos</h3>
+        <p>
+          Contamos tu historia de manera visual y emocional. Videos promocionales, 
+          corporativos y contenido para redes sociales que genera impacto.
+        </p>
+
+        <ul class="servicio-features">
+          <li>Videos corporativos</li>
+          <li>Motion graphics</li>
+          <li>Edición profesional</li>
+          <li>Contenido para redes</li>
+          </ul>
+      </div>
+
+        <!-- Marketing Digital -->
+      <div class="servicio-card">
+        <div class="servicio-icon">📊</div>
+        <h3>Marketing Digital</h3>
+        <p>
+          Estrategias integrales para hacer crecer tu negocio online. Aumentamos tu 
+          visibilidad, engagement y conversiones con campañas basadas en datos.
+        </p>
+        <ul class="servicio-features">
+          <li>SEO y SEM</li>
+          <li>Redes sociales</li>
+          <li>Email marketing</li>
+          <li>Analítica web</li>
+        </ul>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Por Qué Elegirnos -->
+  <section class="por-que-elegirnos">
+    <div class="container">
+      <h2 class="section-title">¿Por Qué Trabajar Con Nosotros?</h2>
+      
+      <div class="caracteristicas-grid">
+        <div class="caracteristica">
+          <div class="caracteristica-numero">01</div>
+          <h3>Experiencia Comprobada</h3>
+          <p>Años de experiencia desarrollando proyectos exitosos para empresas de diversos sectores.</p>
+        </div>
+
+        <div class="caracteristica">
+          <div class="caracteristica-numero">02</div>
+          <h3>Soluciones Personalizadas</h3>
+          <p>Cada proyecto es único. Adaptamos nuestros servicios a tus necesidades específicas.</p>
+        </div>
+
+        <div class="caracteristica">
+          <div class="caracteristica-numero">03</div>
+          <h3>Tecnología de Vanguardia</h3>
+          <p>Utilizamos las últimas herramientas y tendencias del diseño y desarrollo digital.</p>
+        </div>
+
+        <div class="caracteristica">
+          <div class="caracteristica-numero">04</div>
+          <h3>Soporte Continuo</h3>
+          <p>No te dejamos solo. Brindamos mantenimiento y soporte después de la entrega.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="cta">
+    <div class="container">
+      <h2>¿Listo Para Empezar Tu Proyecto?</h2>
+      <p>Conversemos sobre cómo podemos ayudarte a alcanzar tus objetivos digitales</p>
+      <a href="#contacto" class="btn-cta">Solicitar Cotización Gratis</a>
+    </div>
+  </section>
+
+  <!--FOOTER - Pie de página -->
+  <footer>
+
+    <!-- Contenedor principal del footer -->
+    <!-- Links a perfiles sociales con iconos accesibles -->
+    <div class="social-media">
     <!-- Instagram -->
     <a href="https://instagram.com/tu_usuario" target="_blank" aria-label="Instagram">
       <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
@@ -66,14 +228,14 @@
       </svg>
     </a>
 
-  </div>
+    </div>
 
-        <p class="footerCopy">
-            <span class="copyright">&copy; 2025 Todos los Derechos Reservados</span>
-            <span class="separador"> | </span>
-            <span class="desarrollador">Desarrollado por Alexandra Santa Muñoz</span>
-        </p>
+    <p class="footerCopy">
+      <span class="copyright">&copy; 2025 Todos los Derechos Reservados</span>
+      <span class="separador"> | </span>
+      <span class="desarrollador">Desarrollado por Alexandra Santa Muñoz</span>
+    </p>
      
-    </footer>
+  </footer>
 </body>
 </html>

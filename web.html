@@ -1,4 +1,11 @@
 <!DOCTYPE html>
+<!--
+  Archivo: web.html
+  Propósito: Página de Diseño web, para mostrar servicios de Diseño web
+  Autor: Alexandra Santa Muñoz
+  Fecha: 14/01/2026
+  Descripción: Contiene la estructura principal con header, navegación y secciones
+-->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,45 +15,49 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="preload" href="css/styles.css" as="style">
-    <link rel="stylesheet" href="css/estilos.css">    
+    <link rel="preload" href="css/main.css" as="style">
+    <link rel="stylesheet" href="css/main.css">    
     <link rel="icon" type="image/x-icon" href="img/logo.png">
     <title>M&SS</title>
 
 </head>
 <body>
 
-  <header>
-        <h1 class="logo">
-          <img src="img/logo.png" alt="">
-        </h1>
+  <!-- Encabezado principal del sitio -->
+  <header class="site-header">
+    
+    <!-- Logo del sitio -->
+    <figure class="logo">
+      <img src="img/logo.png" alt="Logo de la empresa - Diseño web y marketing digital">
+    </figure>
+    
+    <!-- Navegación principal del sitio -->
+    <nav class="nav-bg" aria-label="Navegación principal">
+      <ul class="navegacion-principal contenedor">
+        <li><a href="index.html" aria-current="page">Inicio</a></li>
+        <li><a href="web.html">Diseño web</a></li>
+        <li><a href="animacion.html">Animaciones en 3D</a></li>
+        <li><a href="video.html">Videos</a></li>
+        <li><a href="marketing.html">Marketing Digital</a></li>
+        <li><a href="acercade.html">Acerca De</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>  
   </header>
 
-  <div class="nav-bg">
-        <nav class="navegacion-principal contenedor">
-            <a href="index.html">Inicio</a>
-            <a href="web.html">Diseño web</a>
-            <a href="animacion.html">Animaciones en 3D</a>
-            <a href="video.html">Videos</a></li>
-            <a href="marketing.html">Marketing Digital</a>
-            <a href="acercade.html">Acerca De</a>
-            <a href="contacto.html">Contacto</a>
-        </nav>
-  </div>
-
   <section class="sectionPresentacion">
-        <article class="container">
-          <h1>Diseñamos webs que impulsan <span class="highlight">su marca</span></h1>
-          <p>
-            Creamos sitios web modernos y funcionales que convierten visitantes en clientes. Cada diseño es responsive, 
-            optimizado para SEO y pensado para ofrecer una experiencia de usuario excepcional que refleja la identidad 
-            única de tu marca.
-          </p>
-          <div class="button-container">
-              <a href="contacto.html" class="cta-button">Comenzar Ahora</a>
-          </div>
-        </article>
-    </section>          
+    <article class="container">
+      <h1>Diseñamos webs que impulsan <span class="highlight">su marca</span></h1>
+      <p>
+        Creamos sitios web modernos y funcionales que convierten visitantes en clientes. Cada diseño es responsive, 
+        optimizado para SEO y pensado para ofrecer una experiencia de usuario excepcional que refleja la identidad 
+        única de tu marca.
+      </p>
+      <div class="button-container">
+        <a href="contacto.html" class="cta-button">Comenzar Ahora</a>
+      </div>
+    </article>
+  </section>          
   
   <!-- Contenedor de muestra de Sitios Web -->
 
@@ -57,75 +68,73 @@
     <div class="item-grid">
     
       <!-- Web 1 -->
-      <article class="item-card">
-        <div class="item-thumbnail">
-          <img src="img/web1.png" alt="video de muestra 1">
-        </div>
-        <div class="item-info">
-          <h3>Web de muestra 1</h3>
-          <p>Descripción breve del Sitio web y sus puntos principales.</p>
-        </div>
-      </article>
+    <article class="item-card">
+      <div class="item-thumbnail">
+        <img src="img/web1.png" alt="video de muestra 1">
+      </div>
+      <div class="item-info">
+        <h3>Web de muestra 1</h3>
+        <p>Descripción breve del Sitio web y sus puntos principales.</p>
+      </div>
+    </article>
 
       <!-- Web 2 -->
-      <article class="item-card">
-        <div class="item-thumbnail">
-          <img src="img/web2.png" alt="web de muestra 1">
-        </div>
-        <div class="item-info">
-          <h3>Web de muestra 2</h3>
-          <p>Descripción breve del Sitio web y sus puntos principales.</p>
-        </div>
-      </article>
+    <article class="item-card">
+      <div class="item-thumbnail">
+        <img src="img/web2.png" alt="web de muestra 1">
+      </div>
+      <div class="item-info">
+        <h3>Web de muestra 2</h3>
+        <p>Descripción breve del Sitio web y sus puntos principales.</p>
+      </div>
+    </article>
 
       <!-- Web 3 -->
-      <article class="item-card">
-        <div class="item-thumbnail">
-          <img src="img/web3.png" alt="web de muestra 1">
-        </div>
-        <div class="item-info">
-          <h3>Web de muestra 3</h3>
-          <p>Descripción breve del Sitio web y sus puntos principales.</p>
-        </div>
-      </article>       
+    <article class="item-card">
+      <div class="item-thumbnail">
+        <img src="img/web3.png" alt="web de muestra 1">
+      </div>
+      <div class="item-info">
+        <h3>Web de muestra 3</h3>
+        <p>Descripción breve del Sitio web y sus puntos principales.</p>
+      </div>
+    </article>       
 
       <!-- Web 4 -->
-      <article class="item-card">
-        <div class="item-thumbnail">
-          <img src="img/web4.png" alt="video de muestra 1">
-        </div>
-        <div class="item-info">
-          <h3>Web de muestra 4</h3>
-          <p>Descripción breve del Sitio web y sus puntos principales.</p>
-        </div>
-      </article> 
+    <article class="item-card">
+      <div class="item-thumbnail">
+        <img src="img/web4.png" alt="video de muestra 1">
+      </div>
+      <div class="item-info">
+        <h3>Web de muestra 4</h3>
+        <p>Descripción breve del Sitio web y sus puntos principales.</p>
+      </div>
+    </article> 
 
       <!-- Web 5 -->
-      <article class="item-card">
-        <div class="item-thumbnail">
-          <img src="img/web5.png" alt="video de muestra 1">
-        </div>
-        <div class="item-info">
-          <h3>Web de muestra 5</h3>
-          <p>Descripción breve del Sitio web y sus puntos principales.</p>
-        </div>
-      </article>     
+    <article class="item-card">
+      <div class="item-thumbnail">
+        <img src="img/web5.png" alt="video de muestra 1">
+      </div>
+      <div class="item-info">
+        <h3>Web de muestra 5</h3>
+        <p>Descripción breve del Sitio web y sus puntos principales.</p>
+      </div>
+    </article>     
 
     <!-- Web 6 -->
-      <article class="item-card">
-        <div class="item-thumbnail">
-          <img src="img/web6.png" alt="video de muestra 1">
-        </div>
-        <div class="item-info">
-          <h3>Web de muestra 6</h3>
-          <p>Descripción breve del Sitio web y sus puntos principales.</p>
-        </div>
-      </article>
-    </section>
-        <!-- Contenedor Presentacion de pagina -->
-    
-            
-
+    <article class="item-card">
+      <div class="item-thumbnail">
+        <img src="img/web6.png" alt="video de muestra 1">
+      </div>
+      <div class="item-info">
+        <h3>Web de muestra 6</h3>
+        <p>Descripción breve del Sitio web y sus puntos principales.</p>
+      </div>
+    </article>
+  </section>
+             
+  <!-- Pie de página del sitio -->
   <footer>
       <div class="social-media">
         <!-- Instagram -->
@@ -151,11 +160,11 @@
 
       </div>
 
-          <p class="footerCopy">
-              <span class="copyright">&copy; 2025 Todos los Derechos Reservados</span>
-              <span class="separador"> | </span>
-              <span class="desarrollador">Desarrollado por Alexandra Santa Muñoz</span>
-          </p>
+      <p class="footerCopy">
+        <span class="copyright">&copy; 2025 Todos los Derechos Reservados</span>
+        <span class="separador"> | </span>
+        <span class="desarrollador">Desarrollado por Alexandra Santa Muñoz</span>
+      </p>
       
   </footer>
 

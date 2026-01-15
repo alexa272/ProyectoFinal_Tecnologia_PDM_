@@ -1,0 +1,934 @@
+/* main.css */
+@import url("formulario.css");
+@import url("footer.css");
+
+
+/* ============================================
+   SISTEMA DE DISEÑO - VARIABLES GLOBALES
+   ============================================ */
+
+:root {
+  /* Colores principales */
+  --menuPrincipal: #FF8C00;     /* Naranja principal - Menú y logo */
+  --hoverMenu: #FFC04D;         /* Naranja claro - Hover del menú */
+  --primary: #FF8C00;           /* Naranja principal (alias del menú) */
+  --secondary: #2C3E50;         /* Azul oscuro profundo */
+  --accent: #E74C3C;            /* Rojo coral para CTAs importantes */
+  --dark: #1A252F;              /* Casi negro azulado para textos principales */
+  --light: #F8F9FA;             /* Gris muy claro para fondos */
+  
+  /* Colores de texto */
+  --textPrimary: #2C3E50;       /* Texto principal oscuro */
+  --textSecondary: #5D6D7E;     /* Texto secundario gris */
+  --textLight: #FFFFFF;         /* Texto blanco */
+  
+  /* Colores de fondo */
+  --bgPrimary: #FFFFFF;         /* Fondo blanco principal */
+  --bgSecondary: #F8F9FA;       /* Fondo gris claro */
+  --bgDark: #2C3E50;            /* Fondo oscuro */
+  --bgGradient: linear-gradient(135deg, #FF8C00 0%, #E74C3C 100%);
+  
+  /* Colores de acento */
+  --success: #27AE60;           /* Verde para éxito */
+  --warning: #F39C12;           /* Amarillo para advertencias */
+  --info: #3498DB;              /* Azul para información */
+  --highlight: #3498DB;         /* Azul para elementos destacados */
+}
+
+/* ============================================
+   CONFIGURACIÓN BASE Y RESET
+   ============================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%; /
+}
+
+body {
+  position: relative;
+  min-height: 100vh;
+  font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--textSecondary);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 120rem; 
+  margin: 0 auto;
+  padding: 0 2rem; 
+}
+
+
+/* ============================================
+   HEADER Y NAVEGACIÓN
+   ============================================ */
+
+header .logo img {
+  width: 15rem; 
+  height: 15rem; 
+}
+
+.nav-bg {
+  background-color: var(--menuPrincipal);
+}
+
+.navegacion-principal {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+
+.navegacion-principal a {
+  padding: 1rem;
+  color: var(--textLight);   
+  text-decoration: none;
+  list-style-type: none;
+  font-size: 2rem;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.navegacion-principal a:hover {
+  background-color: var(--hoverMenu);
+  color: var(--dark);
+}
+
+
+/* ============================================
+   PÁGINA INDEX - HERO SECTION
+   ============================================ */
+
+.hero {
+  min-height: 90vh;
+  background: var(--bgGradient);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8rem 2rem; 
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  width: 50rem; 
+  height: 50rem; 
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  top: -20rem; 
+  right: -20rem; 
+}
+
+.hero-content {
+  max-width: 60rem; 
+  z-index: 2;
+  color: var(--textLight);
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 2rem; 
+  line-height: 1.2;
+  animation: fadeInUp 0.8s ease;
+}
+
+.hero-subtitle {
+  font-size: 1.3rem;
+  margin-bottom: 4rem; 
+  opacity: 0.95;
+  animation: fadeInUp 1s ease;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 2rem; 
+  animation: fadeInUp 1.2s ease;
+}
+
+/* Botones del Hero */
+.btn-primary,
+.btn-secondary {
+  padding: 1.5rem 3.5rem; 
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 5rem;
+  transition: all 0.3s;
+  display: inline-block;
+}
+
+.btn-primary {
+  background: var(--textLight);
+  color: var(--primary);
+}
+
+.btn-primary:hover {
+  transform: translateY(-0.3rem); 
+  box-shadow: 0 1rem 2.5rem rgba(0, 0, 0, 0.2);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--textLight);
+  border: 0.2rem solid var(--textLight); 
+}
+
+.btn-secondary:hover {
+  background: var(--textLight);
+  color: var(--primary);
+}
+
+/* Hero Image - Tarjetas Flotantes */
+.hero-image {
+  position: relative;
+  width: 40rem; 
+  height: 40rem;
+  display: none;
+}
+
+.floating-card {
+  position: absolute;
+  background: var(--textLight);
+  padding: 2rem; 
+  border-radius: 1.5rem;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.2);
+  text-align: center;
+  animation: float 3s ease-in-out infinite;
+}
+
+.floating-card span {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.floating-card p {
+  color: var(--dark);
+  font-weight: 600;
+  margin: 0;
+}
+
+.card-1 { top: 0; left: 0; animation-delay: 0s; }
+.card-2 { top: 0; right: 0; animation-delay: 0.5s; }
+.card-3 { bottom: 0; left: 0; animation-delay: 1s; }
+.card-4 { bottom: 0; right: 0; animation-delay: 1.5s; }
+
+/* Animaciones Hero */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-2rem); } 
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(3rem); 
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* ============================================
+   PÁGINA INDEX - SERVICIOS SECTION
+   ============================================ */
+
+.servicios {
+  padding: 10rem 2rem; 
+  background: var(--light);
+}
+
+.section-title {
+  font-size: 2.8rem;
+  color: var(--dark);
+  text-align: center;
+  margin-bottom: 1.5rem; 
+  font-weight: 700;
+}
+
+.section-subtitle {
+  text-align: center;
+  font-size: 1.2rem;
+  color: var(--textSecondary);
+  margin-bottom: 6rem; 
+  max-width: 60rem; 
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.servicios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr)); 
+  gap: 3rem; 
+  margin-top: 5rem; 
+}
+
+.servicio-card {
+  background: var(--textLight);
+  padding: 4rem 3rem; 
+  border-radius: 2rem; 
+  box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.08); 
+  transition: all 0.3s;
+  border: 0.2rem solid transparent; 
+}
+
+.servicio-card:hover {
+  transform: translateY(-1rem); 
+  box-shadow: 0 1.5rem 4rem rgba(102, 126, 234, 0.2);
+  border-color: var(--primary);
+}
+
+.servicio-icon {
+  font-size: 3.5rem;
+  margin-bottom: 2rem; 
+}
+
+.servicio-card h3 {
+  font-size: 1.6rem;
+  color: var(--dark);
+  margin-bottom: 1.5rem; 
+  font-weight: 700;
+}
+
+.servicio-card p {
+  color: var(--textSecondary);
+  margin-bottom: 2rem; 
+  line-height: 1.7;
+}
+
+.servicio-features {
+  list-style: none;
+  padding: 0;
+}
+
+.servicio-features li {
+  padding: 0.8rem 0; 
+  color: var(--textSecondary);
+  position: relative;
+  padding-left: 2.5rem; 
+}
+
+.servicio-features li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--primary);
+  font-weight: bold;
+}
+
+
+/* ============================================
+   PÁGINA INDEX - POR QUÉ ELEGIRNOS
+   ============================================ */
+
+.por-que-elegirnos {
+  padding: 10rem 2rem; 
+  background: var(--textLight);
+}
+
+.caracteristicas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 4rem; 
+  margin-top: 6rem; 
+}
+
+.caracteristica {
+  text-align: center;
+  padding: 3rem; 
+}
+
+.caracteristica-numero {
+  font-size: 3rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 2rem; 
+}
+
+.caracteristica h3 {
+  font-size: 1.4rem;
+  color: var(--dark);
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.caracteristica p {
+  color: var(--textSecondary);
+  line-height: 1.7;
+}
+
+
+/* ============================================
+   PÁGINA INDEX - CALL TO ACTION
+   ============================================ */
+
+.cta {
+  padding: 8rem 2rem; 
+  background: var(--bgGradient);
+  text-align: center;
+  color: var(--textLight);
+}
+
+.cta h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem; 
+  font-weight: 700;
+}
+
+.cta p {
+  font-size: 1.2rem;
+  margin-bottom: 4rem; 
+  opacity: 0.95;
+}
+
+.btn-cta {
+  display: inline-block;
+  padding: 1.8rem 4.5rem; 
+  background: var(--textLight);
+  color: var(--primary);
+  text-decoration: none;
+  border-radius: 5rem; 
+  font-size: 1.1rem;
+  font-weight: 700;
+  transition: all 0.3s;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.2);
+
+}
+
+.btn-cta:hover {
+  transform: translateY(-0.5rem); 
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.3);
+}
+
+
+/* ============================================
+   PÁGINA DISEÑO WEB - PRESENTACIÓN
+   ============================================ */
+
+.sectionPresentacion {
+  box-shadow: inset 0 0 1rem 0.5rem rgba(0, 0, 0, 0.3); 
+  min-height: 40rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+  padding-top: 1.5rem; 
+}
+          
+.sectionPresentacion .container {
+  margin-top: 1.5rem; 
+  max-width: 80rem; 
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 2rem;
+  padding: 2rem 4rem; 
+  box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.3); 
+  backdrop-filter: blur(1rem);
+}
+
+.sectionPresentacion article > h1 {
+  font-size: 2.5rem; 
+  color: var(--dark);
+  margin-bottom: 1rem; 
+  line-height: 1.2;
+  text-align: center;
+}
+
+.highlight {
+  color: var(--highlight);
+  font-weight: bold;
+}
+
+.sectionPresentacion p {
+  font-size: 1.6rem;
+  color: var(--textSecondary);
+  line-height: 1.8;
+  text-align: justify;
+  margin-bottom: 2rem; 
+}
+
+.cta-button {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--hoverMenu) 0%, var(--menuPrincipal) 100%);
+  color: white;
+  padding: 1.5rem 4rem; 
+  border-radius: 5rem; 
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-top: 2rem; 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0.4rem 1.5rem rgba(255, 140, 0, 0.4); 
+}
+
+.cta-button:hover {
+  transform: translateY(-0.3rem);
+  box-shadow: 0 0.6rem 2.5rem rgba(255, 140, 0, 0.6);
+}
+
+.button-container {
+  text-align: center;
+}
+
+
+/* ============================================
+   PÁGINA ANIMACIONES 3D / VIDEOS - GALERÍA
+   ============================================ */
+
+.item-section {
+  max-width: 120rem; 
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.item-section h2 {
+  text-align: center;
+  margin-bottom: 4rem; 
+  color: var(--dark);
+  font-size: 2rem;
+}
+
+.item-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem; 
+  margin-bottom: 2.5rem; 
+}
+
+.item-card {
+  max-height: 40rem;
+  background: var(--textLight);
+  border-radius: 0.8rem;
+  overflow: hidden;
+  box-shadow: 0 0.2rem 0.8rem rgba(0, 0, 0, 0.1); 
+  transition: transform 0.3s ease;
+}
+
+.item-card:hover {
+  transform: translateY(-0.5rem); 
+  box-shadow: 0 0.4rem 1.2rem rgba(0, 0, 0, 0.15); 
+}
+
+.item-thumbnail {
+  position: relative;
+  background-color: var(--bgDark);
+}
+
+.item-thumbnail img {
+  width: 40rem; 
+  height: 25rem; 
+}
+
+.item-info {
+  padding: 0.5rem;
+}
+
+.item-info h3 {
+  font-size: 1.8rem;
+  color: var(--dark);
+}
+
+.item-info p {
+  font-size: 1.5rem;
+  color: var(--textSecondary);
+  line-height: 1.5;
+}
+
+
+/* ============================================
+   PÁGINA MARKETING DIGITAL - CONTENIDO
+   ============================================ */
+
+.contenedorMarketing {
+  max-width: 80rem; 
+  margin: 5rem auto; 
+  padding: 4rem; 
+  font-size: 1.5rem;
+  background-color: var(--light);
+  border-radius: 1.2rem; 
+  box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.1); 
+}
+
+.contenedorMarketing h2 {
+  color: var(--dark);
+  font-size: 4rem;
+  margin-bottom: 2rem; 
+  text-align: center;
+  font-weight: bold;
+  border-bottom: 0.3rem solid var(--info);
+  padding-bottom: 1rem; 
+}
+
+.contenedorMarketing p {
+  color: var(--textSecondary);
+  font-size: 1.5rem;
+  text-align: justify;
+}
+
+.servicios-lista {
+  margin-top: 2rem; 
+  padding-left: 3rem; 
+}
+
+.servicios-lista li {
+  color: var(--textSecondary);
+  font-size: 1.5rem;
+  line-height: 2;
+  margin-bottom: 1rem; 
+  padding-left: 1rem; 
+  transition: color 0.3s;
+}
+
+.servicios-lista li:hover {
+  color: var(--info);
+}
+
+
+/* ============================================
+   PÁGINA ACERCA DE - SECCIÓN PRINCIPAL
+   ============================================ */
+
+.acerca-de {
+  padding: 10rem 2rem; 
+  background: var(--textLight);
+}
+
+.acerca-header {
+  text-align: center;
+  margin-bottom: 8rem; 
+}
+
+/* Historia y Contenido */
+.acerca-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem; 
+  align-items: center;
+  margin-bottom: 8rem; 
+}
+
+.acerca-text h3 {
+  font-size: 2rem;
+  color: var(--dark);
+  margin-bottom: 2.5rem; 
+  font-weight: 700;
+}
+
+.acerca-text p {
+  font-size: 1.6rem; 
+  line-height: 1.8;
+  color: var(--textSecondary);
+  margin-bottom: 2rem;
+}
+
+.acerca-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-placeholder {
+  width: 100%;
+  height: 40rem; 
+  background: var(--bgGradient);
+  border-radius: 2rem; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2rem 6rem rgba(255, 140, 0, 0.3); 
+  transition: transform 0.3s;
+}
+
+.image-placeholder:hover {
+  transform: scale(1.05);
+}
+
+.image-placeholder span {
+  font-size: 5rem;
+  margin-bottom: 2rem; 
+}
+
+.image-placeholder p {
+  color: var(--textLight);
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+
+/* ============================================
+   PÁGINA ACERCA DE - MISIÓN, VISIÓN, VALORES
+   ============================================ */
+
+.mvv-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 3rem; 
+  margin-bottom: 8rem; 
+}
+
+.mvv-card {
+  background: var(--light);
+  padding: 4rem 3rem; 
+  border-radius: 1.5rem; 
+  text-align: center;
+  transition: all 0.3s;
+  border: 0.2rem solid transparent; 
+}
+
+.mvv-card:hover {
+  background: var(--textLight);
+  border-color: var(--primary);
+  box-shadow: 0 1rem 3rem rgba(255, 140, 0, 0.15); 
+  transform: translateY(-0.5rem); 
+}
+
+.mvv-icon {
+  font-size: 3.5rem;
+  margin-bottom: 2rem; 
+}
+
+.mvv-card h3 {
+  font-size: 1.8rem;
+  color: var(--dark);
+  margin-bottom: 2rem; 
+  font-weight: 700;
+}
+
+.mvv-card p {
+  font-size: 1.5rem; 
+  line-height: 1.7;
+  color: var(--textSecondary);
+}
+
+.valores-lista {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}
+
+.valores-lista li {
+  padding: 1rem 0; 
+  color: var(--textSecondary);
+  font-size: 1.5rem; 
+  position: relative;
+  padding-left: 3rem; 
+}
+
+.valores-lista li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--primary);
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+
+/* ============================================
+   PÁGINA ACERCA DE - ESTADÍSTICAS
+   ============================================ */
+
+.estadisticas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr)); 
+  gap: 3rem; 
+  margin-bottom: 8rem;
+  background: var(--bgGradient);
+  border-radius: 2rem; 
+  padding: 6rem 4rem; 
+}
+
+.stat-card {
+  text-align: center;
+  color: var(--textLight);
+}
+
+.stat-numero {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 1rem; 
+  animation: countUp 2s ease-out;
+}
+
+.stat-texto {
+  font-size: 1.1rem;
+  opacity: 0.95;
+  font-weight: 500;
+}
+
+@keyframes countUp {
+  from {
+    opacity: 0;
+    transform: translateY(2rem); 
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* ============================================
+   PÁGINA ACERCA DE - EQUIPO
+   ============================================ */
+
+.equipo-section {
+  margin-bottom: 8rem; 
+}
+
+.equipo-title {
+  font-size: 2.5rem;
+  color: var(--dark);
+  text-align: center;
+  margin-bottom: 1.5rem; 
+  font-weight: 700;
+}
+
+.equipo-subtitle {
+  text-align: center;
+  font-size: 1.2rem;
+  color: var(--textSecondary);
+  margin-bottom: 5rem; 
+}
+
+.equipo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr)); 
+  gap: 3rem; 
+}
+
+.miembro-card {
+  background: var(--light);
+  padding: 4rem 2.5rem; 
+  border-radius: 1.5rem;
+  text-align: center;
+  transition: all 0.3s;
+}
+
+.miembro-card:hover {
+  transform: translateY(-1rem);
+  box-shadow: 0 1.5rem 3.5rem rgba(0, 0, 0, 0.1); 
+}
+
+.miembro-avatar {
+  width: 10rem;
+  height: 10rem; 
+  margin: 0 auto 2.5rem; 
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+}
+
+.miembro-card h4 {
+  font-size: 1.4rem;
+  color: var(--dark);
+  margin-bottom: 1.5rem; 
+  font-weight: 700;
+}
+
+.miembro-card p {
+  font-size: 1.4rem; 
+  line-height: 1.6;
+  color: var(--textSecondary);
+}
+
+
+/* ============================================
+   PÁGINA ACERCA DE - PROCESO DE TRABAJO
+   ============================================ */
+
+.proceso-section {
+  background: var(--light);
+  padding: 6rem 4rem; 
+  border-radius: 2rem; 
+}
+
+.proceso-title {
+  font-size: 2.5rem;
+  color: var(--dark);
+  text-align: center;
+  margin-bottom: 1.5rem; 
+  font-weight: 700;
+}
+
+.proceso-subtitle {
+  text-align: center;
+  font-size: 1.2rem;
+  color: var(--textSecondary);
+  margin-bottom: 6rem; 
+}
+
+.proceso-timeline {
+  max-width: 90rem; 
+  margin: 0 auto;
+}
+
+.proceso-step {
+  display: grid;
+  grid-template-columns: 8rem 1fr;
+  gap: 3rem; 
+  margin-bottom: 4rem; 
+  position: relative;
+}
+
+.proceso-step:not(:last-child)::before {
+  content: '';
+  position: absolute;
+  left: 4rem; 
+  top: 8rem; 
+  width: 0.2rem;
+  height: calc(100% + 4rem);
+  background: linear-gradient(180deg, var(--primary), var(--secondary));
+}
+
+.step-numero {
+  width: 8rem; 
+  height: 8rem;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: var(--textLight);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: 800;
+  box-shadow: 0 0.5rem 2rem rgba(255, 140, 0, 0.3); 
+  position: relative;
+  z-index: 1;
+}
+
+.step-content {
+  background: var(--textLight);
+  padding: 2.5rem 3rem;
+  border-radius: 1.5rem; 
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.08);
+}
+
+.step-content h4 {
+  font-size: 1.5rem;
+  color: var(--dark);
+  margin-bottom: 1rem; 
+  font-weight: 700;
+}
+
+.step-content p {
+  font-size: 1.5rem; 
+  line-height: 1.7;
+  color: var(--textSecondary);
+  margin: 0;
+}
+
+
