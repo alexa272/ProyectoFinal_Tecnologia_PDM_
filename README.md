@@ -74,7 +74,7 @@ Para este proyecto, elegí una paleta de colores vibrantes y profesionales para 
 ## Instalación
 1. Clona o descarga este repositorio:
 ```bash
-git clone [URL-de-tu-repositorio]
+git clone [(https://github.com/alexa272/ProyectoFinal_Tecnologia_PDM_)]
 ```
 
 2. Abre la carpeta del proyecto en tu editor de código
