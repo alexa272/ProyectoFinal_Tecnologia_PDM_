@@ -137,7 +137,7 @@ Para más opciones, visita: https://formsubmit.co/
 
 ## 👤 Autor
 
-Creado por **[Alexandra Santa Muñoz]([https://github.com/tu-usuario](https://github.com/alexa272/ProyectoFinal_Tecnologia_En_Produccion_de_Multimedia))**
+Creado por **[Alexandra Santa Muñoz]([https://github.com/alexa272](https://github.com/alexa272/ProyectoFinal_Tecnologia_En_Produccion_de_Multimedia))**
 
 - GitHub: [@alexa272](https://github.com/alexa272)
 - Email: alexandrasantamunoz@gmail.com
